@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <header class="header" id="top">
+        <nav>
+
+            <div class="brand-box">
+                <a class="brand" href="#project">What's this Project?</a>
+            </div>
+
+            <div class="text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary-main">SORTING VISUALIZER</span>
+
+            <!-- Taking input from User. -->
+                    <span class="heading-primary-sub">
+                        <p>Size of the array:</p>
+                        <input id="arraySize" type="range" min=20 max=150 step=1 value=80>
+                        <p>Speed of the algorithm:</p>
+                        <input id="arraySpeed" type="range" min=1 max=5 step=1 value=4>
+                        <div class="margins">
+                            <button id="arrayGenerate" class="generate-button" role="button">Generate New Array</button>
+                        </div>
+                    </span>
+		        </h1>
+
+            <!-- Algo Buttons -->
+                    <div class="header_right">
+                        <div class="algos">
+                            <button >Bubble</button>
+                            <button >Selection</button>
+                            <button >Insertion</button>
+                            <button >Merge</button>
+                            <button >Quick</button>
+                            <button style="margin-right: 0px;">Heap</button>
+                        </div>
+                    </div>
+            </div>
+	    </nav>
+    </header>
+
+    <section>
+
+        <!-- Time and Space Complexity -->
+        <div id="Info_Cont1">
+            <h1>Time</h1>
+            <h2>Complexity</h2>
+
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+
+            
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="array_container">
+            
+        </div>
+
+        <div id="Info_Cont2">
+            <h1>Space</h1>
+            <h2>Complexity</h2>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Space_Worst"></p>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="about" id="project">
+        <h1>
+            What's this <em>Project</em>?
+        </h1>
+        <hr class="styling">
+        <br>
+    </div>
+    <div class="detailing">
+        <p>This project will demonstrate the inner mechanisms of various sorting algorithms. <br><br>
+             <i><b>Highlighted features:</b></i>
+
+             <ul class="b">
+                <i class="bottom">Visualization with color-coded steps:</i>
+                <li><b><span class="blue">Blue</span></b>: Default state</li>
+                <li><b><span class="yellow">Yellow</span></b>: Elements being compared</li>
+                <li><b><span class="red">Red</span></b>: Elements incorrectly positioned, marked for movement</li>
+                <li><b><span class="green">Green</span></b>: Elements in the correct position</li>
+             </ul>
+             
+             <ul class="b">
+                <i class="bottom">Adjustable visualization controls:</i>
+                <li>Speed settings (5 different levels)</li>
+                <li>Data size adjustments</li>
+                <li>Option to generate new random data</li>
+                <li>Display of time and space complexities for the algorithm being showcased.</li>
+             </ul>   
+             <br>
+             
+             <i>*For optimal visualization, please use this on a larger screen.</i>
+        </p>
+    </div>
+
+		<!-- <footer class="footer-distributed">
+
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="#top">Home</a>
+
+					<a href="#">GitHub</a>
+
+					<a href="#">LinkedIn</a>
+
+					<a href="#">X</a>
+				</p>
+
+				<p>Rehan Raza &copy; 2024</p>
+			</div>
+
+		</footer> -->
+
+    <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
+
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>
